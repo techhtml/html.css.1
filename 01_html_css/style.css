@@ -1,0 +1,60 @@
+/**
+ * CSS라는 언어는 왜 만들어졌나?
+ * 기본 HTML이 너무 못생겨서
+ * 강조하고 싶어.. 폰트를 굵게 하고싶어... 이탤릭
+ * html (root element)
+ * body
+ */
+
+/**
+ * Selector {}
+ * 셀렉터 {}
+ * {} - Style Rule
+ */
+
+html {
+  /**
+   * html (요소명, 태그명) 셀렉터
+   * type selector
+   */
+   font-size:18px;
+   /* 브라우저의 기본폰트 사이즈 16px */
+   line-height:22px;
+   font-family:'Helvetica NEUE','APPLE SD Gothic NEO',sans-serif;
+   /*
+    * serif (삐침, 명조)
+    * sans (없는)
+    * sans-serif (삐침이 없는, 고딕)
+    * 애플 : APPLE SD Gothic NEO
+    * 윈도우 : 맑은 고딕
+    */
+}
+
+.area_wrap {
+  /* clearfix */
+  overflow:hidden;
+}
+.area_a {
+  /* class selector */
+  float:left;
+  width:20%;
+}
+.area_b {
+  float:left;
+  width:80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/

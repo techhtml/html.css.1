@@ -1,0 +1,81 @@
+<!--
+  - HTML
+  - Hyper Text Markup Language
+  - Hyper Text (초월하는 텍스트) - 링크
+  - Markup Language (문법 시간)
+  - 1992년, 1993년 국제 표준
+  - 2016년 현재 (5.0이 표준)
+  - 왜 만들었나?
+  - CERN
+  - 1992년 당시, 웹 X
+  - APPLE 2, IBM
+  - 연구실 A - APPLE 2
+  - 연구실 B - IBM
+  - 3.5 인치 플로피 디스켓
+  - APPLE 2에서 작성한 문서를 IBM에선 못봐
+  - 팀 버너스 리 (Tim Berners Lee)
+  - 사내기술혁신, 사내에 조금 더 편리한 연구 환경을 제공하는 팀
+  - 회사 친구 1명 + 팀 버너스 리
+    - HTTP의 기초
+    - HTML을 만듬
+    - HTML의 원래 목적 = 문서를 작성하는 것
+-->
+<!DOCTYPE html>
+<!-- HTML을 최신버전으로 해 줘 -->
+<!-- HTML 5.1이 HTML 5를 지원해요 -->
+<html>
+<!-- HTML 기본 문법 -->
+<!-- Markup Language -->
+<!-- less than(<), greater than(>) -->
+<!-- tag name -->
+<!-- less than(<), tagname, greater than(>) -->
+<!-- TAG -->
+<!-- OPEN TAG (여는 태그), CLOSE TAG (닫는 태그) -->
+<!-- less than(<), slash(/), tagname, greater than(>) -->
+  <head>
+    <!-- 이 사이트를 방문하는 로봇에게 정보를 알려줌 -->
+    <!-- 크롤러 (검색 엔진, 구글)에게 제공하는 콘텐츠 -->
+    <!-- 크롤러 (페이스북, 트위터, SNS)에게 제공하는 콘텐츠 -->
+    <!-- 브라우저에게 제공하는 콘텐츠 -->
+    <meta charset='UTF-8'>
+    <!-- https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C -->
+    <!--
+     TAG
+     (<) Less than
+     Tag Name
+     Whitespace
+     속성명 (Attribute Name)
+     =
+     속성값 (Attribute Value)
+     (>) Greater than
+    -->
+    <title>패스트 캠퍼스 HTML &amp; CSS 첫번째 강의</title>
+    <!-- HTTP Entity Code -->
+    <!-- https://dev.w3.org/html5/html-author/charref -->
+    <link rel='stylesheet' href='style.css'>
+    <!--
+    void element (빈 요소, 닫는 태그가 필요 없는 요소들)
+    area, base, br, col, embed, hr, img, input,
+    keygen, link, menuitem, meta, param, source, track, wbr
+    -->
+  </head>
+  <body>
+    <!-- 이 사이트를 방문하는 모든 것에 정보를 제공함 -->
+    <!-- [  A  ] [          B        ] -->
+    <!-- 2 : 8 -->
+    <!-- (과제) 12 Grid System 한번 구현해보기 -->
+    <!-- 100% / 12 -->
+    <div class='grid'>
+      <div class='col-4'></div>
+      <div class='col-4'></div>
+      <div class='col-4'></div>
+    </div>
+    <div class='area_wrap'>
+      <div class='area_a'>AREA AAREA AAREA AAREA AAREA AAREA AAREA AAREA AAREA AAREA AAREA AAREA AAREA AAREA AAREA AAREA A</div>
+      <div class='area_b'>AREA B</div>
+    </div>
+  </body>
+
+
+
+</html>
