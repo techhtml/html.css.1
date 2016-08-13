@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--
+  - 지난 주에 진행이 빠르다는 이야기가 있었습니다.
+  - 이번 주는 더 천천히 진행해볼게요 :)
+  - 오늘 배울 것
+    - 1) HTML 시멘틱 요소와 요소 조합
+    - 2) HTML block 요소와 inline 요소
+    - 3) 실습 : brunch.co.kr을 보고 HTML 작성해보기
+    - 4) CSS 셀렉터 (Type Selector, Class Selector)
+    - 4.1) CSS 셀렉터 우선순위 계산하기
+    - 5) CSS 레이아웃
+    - 5.1) CSS 단위 (목표)
+    - 5.2) Float
+    - 5.3) Flexbox
+    - 6) 실습 : brunch.co.kr을 보고 CSS로 레이아웃 작성하기
+   -->
+<html lang="en">
+  <head>
+    <!-- HTML 5 -->
+    <meta charset='UTF-8'>
+    <!-- HTML 5 이전 코드 -->
+    <!--meta http-equiv='content-type' content='text/html; charset=UTF-8'-->
+    <!-- 홈페이지 제목 -->
+    <title>Hello world</title>
+    <!--
+      - 960 grid system : http://960.gs/demo.html
+      - 1. screen
+      - 2. browser size
+      - 3. browser scale
+      - 4. webview
+        - 원래 웹뷰에서 device-width = 웹뷰의 사이즈
+        - iOS 8에서는 device-width = 디바이스의 가로사이즈
+      - viewport를 선언하지 않을 경우 960px정도 (0.33배율)
+      - viewport를 옳게 선언할 경우 1배율로 맞추어서 표현
+      - 기본배율 (initial-scale)
+      - 최대배율 (maximum-scale)
+      - 최소배율 (minimum-scale)
+      - 가로사이즈 (width, viewport 선언을 하지 않을 경우: 960)
+      - 기기의 가로사이즈 (device-width)
+      - 확대가능여부 (user-scalable)
+      -->
+    <meta name='viewport' content='initial-scale=1, width=device-width'>
+    <!--
+      - link (연결한다)
+      - rel에 stylesheet -> (CSS)
+      -->
+    <link rel='stylesheet' href='style.css'>
+  </head>
+  <body>
+    <!-- 오늘 배울 것
+      - 1) HTML 시멘틱 요소와 요소 조합
+      - 2) 실습 : brunch.co.kr을 보고 HTML 작성해보기
+      - 3) HTML block 요소와 inline 요소
+
+      - 4) CSS 셀렉터 (Type Selector, Class Selector)
+      - 4.1) CSS 셀렉터 우선순위 계산하기
+
+      - 5) CSS 레이아웃 (목표)
+      - 5.1) CSS 단위
+      - 5.2) Float
+      - 5.3) Flexbox
+      - 6) 실습 : brunch.co.kr을 보고 CSS로 레이아웃 작성하기
+     -->
+    <!--
+      - HTML 디스플레이 모델
+      - 보여진다 (display)
+      - block
+        - 자신이 가질 수 있는 영역 100%를 가진다.
+        - width, height, padding, border, margin을 전부 지원한다. (box-model)
+        - 모든 요소를 포함가능함. (예외상황 존재함)
+        - article, section, nav, main, div, p, h1 ~ h6, ul, ol, li, dl, dt, dd 등등
+
+      - inline
+        - 자신이 가질 수 있는 영역을 텍스트 길이로 정한다.
+        - 줄바꿈이 일어나지 않는다.
+        - <padding, margin>-top, <padding, margin>-bottom이 먹히지 않는다.
+        - inline 요소가 block 요소를 포함하지 않는다. (예외상황 존재함)
+        - a, strong, em, i, s, img, span, br, wbr, input, button
+
+      - inline-block
+        - 자신이 가질 수 있는 영역을 텍스트 길이로 정한다.
+        - 줄바꿈이 일어나지 않는다.
+        - width, height, padding, border, margin을 전부 지원한다. (box-model)
+        - img, input, button
+
+      - ruby
+      - list-item (ul, ol, li)
+      - table (table, thead, tbody, tfoot, tr, th, td)
+    -->
+    <article>
+      <!--
+        - 의미 : 사이트 전체에 비교했을 때 독립적인 콘텐츠
+        - 문서 관점 : 블로그 글, 개인 저작물, 뉴스 기사
+        - 어플리케이션 관점 : 위젯
+      -->
+      <header>
+        <!--
+          - 링크, 하이퍼텍스트
+          - anchor (a 요소)
+         -->
+         <a class='lnk-header' href="https://www.theguardian.com/travel/russia">Russia holidays</a>
+        <!--
+          - 이 콘텐츠(아티클)에서 제일 중요한, 제목
+          - heading (h1 - h6)
+         -->
+         <h1>Russia’s Golden Ring:
+             day trips from Moscow into history and heritage</h1>
+         <!--
+           - 문장을 나타낼 때
+           - paragraph (p)
+           -->
+         <p class='paragraph-header'>A short train ride north-east of
+           Moscow lies a collection of towns foreign tourists often miss,
+           but they’re rich in culture, tradition and fantastic sights</p>
+      </header>
+      <section>
+        <h2>Contents</h2>
+        <!--
+          - 구획을 나눌 때, 관심사끼리 묶을 때
+          - 일반적으로 : 뉴스 섹션, 스포츠 섹션, 여행 섹션
+         -->
+       <!--
+         - section과 article을 구분하는 건,
+         - 이 콘텐츠가 사이트와 독립적인가 그렇지 아니한가.
+         - div와 (section, article)을 구분하는 건,
+         - 제목을 붙일 수 있는가 없는가
+        -->
+        <p class='paragraph-first'>The Golden Ring is a popular destination for Russian tourists:
+          the towns in the region are ancient,
+          and many were important centres in medieval Russia.
+          But this area, north-east of Moscow, has more to offer,
+          such as traditional food, and nature straight from Russian fairytales.
+          Many visitors buy package tours for the entire region,
+          but it’s easy to visit the towns on day trips from the capital,
+          especially if you’re not ready for a week-long tour.
+          The journey times to most are a couple of hours by train from Moscow.</p>
+        <h3>Yaroslavl</h3>
+        <!--
+          - 이미지
+          - image (img)
+          - alternative text (alt)
+         -->
+        <img src='Yaroslavl.jpg' alt='Yaroslavl 이미지'>
+        <p><strong>What to see</strong> The heritage of this place is vast: the Transfiguration monastery, founded in the 11th century, was a favourite of Ivan the Terrible and is now a museum. It is also part of the city’s large <a href="http://www.russianmuseums.info/M1855">Museum Reserve</a>. A walk along the banks of the Volga, the longest river in Europe, is as much a cultural activity as it is a hike. The Governor’s house museum has an excellent collection of the Yaroslavl school of icon painting and the Music and Time Museum has the country’s largest collection of antique record players, vinyl records and clocks.</p>
+        <p>For dinner, consider Ioann Vasiliyevich (Revolutsionnaya Street), a restaurant themed after a Soviet film but interesting even to those who haven’t seen it. The decor is a mixture of medieval Russian halls and 1970s Soviet flats, and the food combines traditional Russian and Soviet cuisines. The restaurant is a part of the Cinema Club hotel.</p>
+        <p>How to get there By train from Moscow’s Yaroslavskiy station. Return tickets from £18, journey takes around four hours.</p>
+        <p>Where to stay The Cinema Club has private rooms from £33. For a more affordable stay, go to Like Hostel (25B Andropova street), only a few streets away, with dorms from £6 and private rooms from £18.</p>
+
+        <h3>Vladimir</h3>
+        <img src='https://i.guim.co.uk/img/media/7e893d84df8546bac940387d370b28e86d4fc6f0/0_0_5150_3090/master/5150.jpg?w=605&q=55&auto=format&usm=12&fit=max&s=859b99d44c63661a2e020ff364203bdf' alt=''>
+        <p>What to see This ancient Russian city is a must-see for its traditional white stone architecture and monumental Orthodox cathedrals: the Cathedral of Saint Demetrius and Dormition (Uspensky) Cathedral – both on Bolshaya Moskovskaya Street. The Golden Gate, which marks the entrance into the old town, is another famous landmark. For those interested in traditional crafts and souvenirs, the Museum of Crystal and Lacquer Miniatures is in the Old Believers Trinity Church behind the Golden Gate, and also exhibits traditional embroidery. The Gingerbread museum might interest those with kids or a sweet tooth – a standard tour includes a tasting. The museum’s cafe, called Blinnaya Izba (Blini Hut), serves traditional Russian crepes, blini, with a variety of fillings and toppings. If you’re in the city for more than a day, consider a trip to the ancient Bogoluybovo village, a 20-minute drive from the city and home to the Unesco-protected Church of the Intercession, on the banks of the Nerl river.</p>
+        <img src='https://i.guim.co.uk/img/media/2ceb526a20b3099cb033029042ffa02d3c03dc14/0_13_800_480/master/800.jpg?w=605&q=55&auto=format&usm=12&fit=max&s=f263b745ca4c4515514850b0005bdaad' alt=''>
+        <p>How to get there Trains from Moscow’s Kursky or Yaroslavskiy stations cost from £14 return and take between 90 minutes and three hours.</p>
+        <p>Where to stay Vozduh hostel is a five-minute walk from the Golden Gate and has dorm beds from £6 a night. Orion hotel, close by on 2-aya Nikolskaya Street, is a popular choice with tourists and has doubles from £45.</p>
+
+        <h3>Sergiyev Posad</h3>
+
+        <h3>Suzdal</h3>
+
+        <h3>Rostov Velikiy</h3>
+      </section>
+      <footer></footer>
+    </article>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- -->
