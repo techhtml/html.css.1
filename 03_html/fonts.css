@@ -1,0 +1,51 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+/**
+ * CSS Font
+ * Font
+ * 폰트에 대해서
+   * 나는 애플고딕을 쓸거야 (font-family)
+   * 폰트사이즈는 18px이었으면 좋겠어 (font-size)
+   * 폰트 굵기는 가늘었으면 좋겠어 (font-weight)
+   * 행간이 좀 넓었으면 좋겠어 (line-height)
+   * 자간이 좁았으면 좋겠어 (letter-spacing)
+ * 텍스트에 대해서
+   * 나는 텍스트들이 중앙정렬되었으면 좋겠어 (text-align)
+   * 텍스트에 밑줄이 있었으면 좋겠어 (text-decoration)
+   * 텍스트의 첫번째 줄에 들여쓰기가 되었음 좋겠어 (text-indent)
+ * 웹폰트란?
+   * 폰트 = 파일
+   * 만약에 내가 정의한 폰트가 여러분들의 OS(컴퓨터)에 없다면?
+   * 서버에 폰트를 두고, 이 웹사이트에 접속했을 때 폰트를 다운받고, 캐시에 저장해줘.
+   * Google Fonts (Google Early Access)
+ * CSS (Cascading Style sheet)
+   * HTML에 부모요소와 자식요소
+   * Cascading === (실세계 관점에서) 유전자 상속
+   * 부모에게 스타일을 적용하면 자식이 영향을 받습니다.
+ */
+
+html {
+  color: #333;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 1.5em; /* font-size의 1.4배 */
+  letter-spacing: -0.5px;
+  text-align:justify;
+  text-decoration:overline;
+  text-indent:1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* */
