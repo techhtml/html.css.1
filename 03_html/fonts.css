@@ -31,9 +31,9 @@ html {
   font-size: 20px;
   line-height: 1.5em; /* font-size의 1.4배 */
   letter-spacing: -0.5px;
-  text-align:justify;
+  /* text-align:justify;
   text-decoration:overline;
-  text-indent:1.5em;
+  text-indent:1.5em; */
 }
 
 

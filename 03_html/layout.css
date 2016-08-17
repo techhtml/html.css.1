@@ -1,0 +1,54 @@
+/**
+ * layout
+ * 박스를 내가 원하는 곳에 두는 것
+ * float layout
+ * - Absolute Layout (절대 레이아웃)
+ * - Mobile Layout (모바일 레이아웃)
+ */
+
+/*
+ * 레이아웃의 기본원칙
+ * 1. 깨지면 안된다
+ * 2. 유저의 상황에 따라서 레이아웃이 바뀔 수도 있다.
+ * 3. 배치된 요소에는 항상 부모(컨테이너)가 있어야한다.
+ */
+
+/*
+ * 모바일 레이아웃
+ * 상대 레이아웃
+ */
+
+ /*
+  * 12 grid system
+  * 박스를 최대 12개까지 들어갈 수 있다고 생각
+  * col-<number>의 number를 다 더해서 12가 된다면 레이아웃이 깨져선 안됨
+  * col-1, col-2, col-3, col-4, col-5, col-6
+  * col-7, col-8, col-9, col-10, col-11, col-12
+  */
+.container {
+  overflow:hidden;
+}
+.box-a {
+  float:left;
+  width:33.333333%;
+  box-sizing:border-box;
+}
+.box-b {
+  float:left;
+  width:33.333333%;
+  box-sizing:border-box;
+}
+.box-c {
+  float:left;
+  width:33.333333%;
+  box-sizing:border-box;
+}
+
+
+
+
+
+
+
+
+/**/

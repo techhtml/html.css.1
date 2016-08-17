@@ -1,0 +1,76 @@
+/*
+ * CSS Box-model
+ * Display Model
+   * block element
+     * 자신이 가질 수 있는 영역 100%를 다 가진다
+     * box-model을 전부 적용시킬 수 있다.
+   * inline element
+     * 자신의 콘텐츠 길이만큼을 영역으로 취급한다.
+ * Box Model
+   * 하나의 요소(박스)가 가지고 있는 영역
+   * width - 콘텐츠의 가로 길이
+   * height - 콘텐츠의 세로 높이
+   * padding - 요소(박스)와 콘텐츠 사이의 간격
+   * border - 박스의 외곽선
+   * margin - 요소(박스)와 요소(박스) 사이의 간격
+   * box size를 계산할 때
+   * width + padding-left + padding-right + border-left + border-right
+ */
+
+divv {
+  width: 50%;
+  /* height: 50px; (방탄웹, bulletproof web) */
+  padding: 50px;
+  /*
+   * padding: 4방향
+   * padding-top, padding-right, padding-bottom, padding-left
+   * padding: 50px;
+     * padding-top: 50px;
+     * padding-right: 50px;
+     * padding-bottom: 50px;
+     * padding-left: 50px;
+   * padding: 30px 60px;
+     * padding-top:30px;
+     * padding-right:60px;
+     * padding-bottom: 30px;
+     * padding-left:60px;
+   * padding: <padding-top> <padding-right> <padding-bottom> <padding-left>
+   * padding: 25px 30px 40px 45px;
+   */
+  /* border */
+  border: 5px solid hotpink;
+  /* <border-width> <border-style> <border-color> */
+  /*
+   * margin
+   * margin: <margin-top> <margin-right> <margin-bottom> <margin-left>
+   * collapsed margin
+   * 대상 요소의 margin-bottom과,
+   * 대상 요소의 다음 요소의 margin-top이 선언되어있는 경우,
+   * 두 요소의 margin 값 중 높은 값을 margin으로 취급한다.
+   */
+  margin: 50px;
+  /* 전경색, 폰트색 */
+  color:#fff;
+  /* 배경색 */
+  background: orange;
+}
+
+.box-a {
+  padding:20px;
+  background:orange;
+}
+.box-b {
+  padding:20px;
+  background:hotpink;
+}
+.box-c {
+  padding:20px;
+  background:gold;
+}
+
+
+
+
+
+
+/* */
