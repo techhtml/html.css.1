@@ -1,18 +1,36 @@
 /* HEADER */
-.header {}
+.header {
+	border-bottom:1px solid #eee;
+}
 .container {
-	min-width:32	0px;
+	min-width:320px;
 	width: 100%;
 	max-width:960px;
 	margin:auto;
 	text-align:center;
+	overflow:hidden;
 }
 .logo {
 	float:left;
 }
+.logo h1 {
+	margin:0;
+	font-size:20px;
+}
+.logo a {
+	display:block;
+	padding:10px 5px 9px;
+	color:black;
+	text-decoration:none;
+}
 .search {
 	display: inline-block;
+	margin: 9px 0;
 }
 .user-menu {
 	float:right;
+	margin:12px 0;
+}
+.user-menu a {
+	margin-left:12px;
 }
