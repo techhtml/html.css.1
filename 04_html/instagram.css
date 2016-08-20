@@ -1,0 +1,18 @@
+/* HEADER */
+.header {}
+.container {
+	min-width:32	0px;
+	width: 100%;
+	max-width:960px;
+	margin:auto;
+	text-align:center;
+}
+.logo {
+	float:left;
+}
+.search {
+	display: inline-block;
+}
+.user-menu {
+	float:right;
+}
