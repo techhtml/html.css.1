@@ -1,0 +1,64 @@
+/**
+ * APPLE : Safari (Webkit - 브라우저 엔진)
+ * Google : Chrome (Blink[원래 Webkit])
+ * Mozilla : Firefox (Gecko)
+ * MS : Internet Explorer, MS Edge (Trident)
+ * Opera Software : Opare (Blink[원래 Presto])
+ */
+
+.flex {
+	/*
+	 * vendor prefix
+	 * 벤더 : 브라우저 제조사, 엔진 이름
+	 * 프리픽스 : 접두사
+	 */
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	/*
+	 * flexbox
+	 * 1. 레이아웃이 깨져서는 안된다.
+	 * 2. flexbox 내의 박스가 유동적으로 움직여야 한다.
+	 * 3. 만약 박스 내에 있는 아이템의 총 합한 사이즈가 박스보다 크다면 영역을 균등분할
+	 */
+	 /*
+	 -webkit-flex-direction: row-reverse;
+	 flex-direction: row-reverse;
+
+	 -webkit-flex-wrap: wrap-reverse;
+	 flex-wrap: wrap-reverse;
+   */
+   /* flex-flow: <flex-direction> <flex-wrap> */
+	 -webkit-flex-flow: row wrap;
+	 flex-flow: row wrap;
+}
+.flex .item {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-flex-direction: column;
+	flex-direction: column;
+
+	justify-content: space-between;
+
+	-ms-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+
+	min-width:33.333333%;
+	background:red;
+}
+img {
+	flex:4;
+	width:100%;
+}
+p {
+	flex:1;
+}
+
+
+
+
+/**/
