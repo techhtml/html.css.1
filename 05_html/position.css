@@ -1,0 +1,51 @@
+/**
+ * CSS Position
+ * 1. Coordinate System을 사용한다.
+ * 2. 값 : static, relative, absolute, fixed, sticky;
+ * 3. top, left, right, bottom, z-index 속성과 함께 쓰인다.
+ */
+
+.modal {
+	/* 영역을 브라우저 사이즈만큼 가지고 있어야 해요 */
+	/* 다른 요소들을 무시해야해요 */
+	position: fixed;
+	/* iOS에서 input이 존재하는 화면에서,
+	   position: fixed를 쓰는 경우 버그가 발생함 */
+	/* 절대 좌표 포지션 */
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10000;
+}
+.modal-on {
+	display: block;
+}
+.modal-off {
+	display: none;
+}
+.modal .modal-layer {
+	position:absolute;
+	left:50%;
+	top:50%;
+	-webkit-transform:translate(-50%, -50%);
+	-ms-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+	background:#fff;
+	z-index: 10;
+}
+.modal .modal-dimmed {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 5;
+}
+
+
+
+
+
+/* */
