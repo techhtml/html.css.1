@@ -1,0 +1,17 @@
+.header-wrap {}
+.clearfix:after {
+	/* IE8부터 지원하는 CSS */
+	content:'';
+	display:block;
+	clear:both;
+}
+.header-wrap .header-item {
+	float: left;
+	width: 33.333333%;
+}
+.header-wrap .header-title {
+	text-align: center;
+}
+.header-wrap .header-buttons {
+	text-align: right;
+}
