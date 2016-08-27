@@ -76,3 +76,69 @@
 	background: none;
 	cursor:pointer;
 }
+
+.header-nav {
+	position: fixed;
+	left:0;
+	top:0;
+	bottom:0;
+	border-right: 1px solid #eee;
+	background: #fff;
+	z-index: 10000;
+}
+.header-nav .side-profile {
+	padding: 15px 0;
+  background: #eee;
+}
+.header-nav .side-profile-area {
+	display: block;
+	color: #555;
+	padding:15px 40px;
+	text-decoration: none;
+	text-align: center;
+}
+.header-nav .side-profile-area img {
+	width: 60px;
+	border-radius:50%;
+}
+.header-nav .side-profile-area dl {
+	margin:0;
+}
+.header-nav .side-profile-area dt {
+	color:#000;
+	font-size: 18px;
+}
+.header-nav .side-profile-area dd {
+	margin:0;
+	font-size: 14px;
+	font-style: italic;
+}
+.header-nav .side-profile .btn-write {
+	display: block;
+	width: 60px;
+	padding: 3px 0 2px;
+	margin:auto;
+	border:1px solid #2ac1bc;
+	border-radius: 1em;
+	color: #2ac1bc;
+	background: #fff;
+	text-decoration: none;
+	text-align:center;
+}
+.header-nav .side-profile .btn-likeit {
+  position: absolute;
+	right: 45px;
+	top: 5px;
+}
+.header-nav .side-profile .btn-history {
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+
+
+
+
+
+
+/**/
