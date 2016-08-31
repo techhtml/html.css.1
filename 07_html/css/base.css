@@ -1,0 +1,95 @@
+body {
+	font-size: 16px;
+	line-height: 1.25em;
+	font-family: "Helvetica NEUE", sans-serif;
+	font-weight: 300;
+	color: #333;
+	background: #eee;
+}
+button, a {
+	color: #333;
+	text-decoration: none;
+}
+
+/* header */
+.header-wrap {
+	display: flex;
+	align-items: center;
+	background: white;
+}
+.header-wrap .btn-menu {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 20px;
+}
+.header-wrap h1 {
+	position: relative;
+	top: -2px;
+	font-size: 20px;
+	font-weight: 300;
+}
+.header-wrap .tools {
+	flex: 1;
+	display: flex;
+	justify-content: flex-end;
+}
+.header-wrap .tools a {
+	padding:15px;
+}
+
+.side-menu {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 84.5%;
+	background: white;
+	transition: 0.5s transform ease;
+}
+.side-menu.side-menu-off {
+	transform: translateX(-100%);
+}
+.side-menu.side-menu-on {
+	transform: translateX(0);
+}
+.side-menu .profile {
+	background: hotpink;
+	padding:25px 20px;
+}
+.side-menu .profile-thumb {
+	width:75px;
+	padding:0 0 20px;
+	border-radius:50%;
+}
+.side-menu .profile-thumb img {
+	width:100%;
+	border-radius:50%;
+}
+.side-menu .profile-detail {
+	color: white;
+}
+.side-menu .profile-detail a {
+	font-size: 0.95em;
+	color: white;
+}
+.side-menu .menu {
+}
+.side-menu .menu-list + .menu-list {
+	border-top:1px solid #eee;
+}
+.side-menu .menu-list a {
+	display: block;
+	padding: 0 15px;
+	font-weight: 500;
+	color: #444;
+}
+.side-menu .menu-list .fa {
+	padding: 12px 15px 13px;
+	font-size: 1.5em;
+	vertical-align: middle;
+}
+
+
+
+/**/
