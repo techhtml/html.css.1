@@ -99,3 +99,28 @@ main {}
 }
 .ad {}
 .recommend {}
+.recommend h2 {
+	font-weight: 400;
+	font-size:1em;
+	text-align: center;
+}
+.recommend-wrap {
+	display: flex;
+}
+.recommend-column {
+	flex: 1;
+}
+.recommend-column ul {
+	margin:0;
+	padding:0;
+}
+.recommend-column li {
+	list-style:none;
+	background:#fff;
+	text-align:center;
+	padding: 0.25em;
+	margin: 0.25em;
+}
+.recommend-column img {
+	width: 100%;
+}
