@@ -1,0 +1,273 @@
+/**
+ * CSS 캐스케이딩
+ * 부모가 자식에게 영향을 준다.
+ * 부모에게 지정한 font-size는 자식에게도 지정이 된다.
+ */
+
+html {
+	/* font */
+
+	font-size: 17px;
+	/*
+	 * font-size는 폰트의 사이즈를 지정하는 CSS 속성
+	 * 단위(공통) :
+	 * 1. px - 전통적인 1px = 1px
+	 * 2. em - 부모의 폰트사이즈를 기준으로 상대적으로 바뀌는 값, 1em = 부모의 폰트사이즈 (1em = 17px)
+	 * 3. rem - html 요소의 폰트사이즈를 기준으로 상대적으로 바뀌는 값, 1rem = html요소의 폰트사이즈 (1rem = 17px)
+	 * 4. % - 폰트사이즈인 경우에만, 부모의 폰트사이즈를 100%로 한다. (100% = 17px)
+	 */
+	 line-height: 1.5em;
+	 /*
+	  * line-height는 행간을 지정하는 CSS 속성
+		* 보통 위쪽이 아래쪽보다 더 많이 내려감.
+		* 중앙정렬을 하기위한 CSS를 넣고자 할 때, padding값이나 margin값을 위쪽에 덜 주는 게 좋음.
+		*/
+		letter-spacing: -0.1px;
+		/*
+		 * letter-spacing은 자간을 지정하는 CSS 속성
+		 * 속설상 CSS 픽셀에 소숫점을 사용할 수 없다는 의견도 있지만, IE에서만 그래요.
+		 * 소숫점 픽셀 = 서브 픽셀
+		 */
+		 font-weight: 300;
+		 /*
+		  * font-weight는 폰트의 굵기를 지정하는 CSS 속성
+			* 100 - 900까지의 값
+			* 내가 지정한 폰트가 해당하는 굵기를 지원해야 표현 가능
+			* 100 - Thin
+			* 200 - UltraLight
+			* 300 - Light
+			* 400 - Normal
+			* 500 - Medium
+			* 600 - SemiBold
+			* 700 - Bold
+			* 800 - UltraBold
+			* 900 - Black
+			*/
+			font-family: "APPLE SD Gothic NEO", sans-serif;
+			/*
+			 * font-family는 이 웹사이트에서 사용할 폰트를 지정하는 CSS 속성
+			 * 폰트 이름, Generic Font;
+			 * Generic Font - 폰트의 집합 (폰트 집합의 이름)
+			 * serif - 명조체
+			 * sans-serif - 고딕체
+			 * monospace - 고정폭
+			 * fantasy - 이상한 거
+			 * cursive - 필기체
+			 */
+
+			 -webkit-font-smoothing: antialiased;
+			 /*
+			  * font-smoothing은 폰트의 안티얼라이싱
+				* Safari, Chrome, Opera에서만 지원 (IE에서 안됨)
+				* 이 친구는 CSS3
+				*/
+
+				/* TEXT */
+				text-align: center;
+
+				/*
+				 * text-align은 텍스트의 정렬
+				 * left    : 왼쪽 정렬
+				 * right   : 오른 정렬
+				 * center  : 중앙 정렬
+				 * justify : 좌우 정렬
+				 */
+}
+
+article {
+	/*************
+	 * box-model
+	 * box-model은 페이지 내의 HTML 요소가 어떻게 보여질 지 정해주는 속성
+	 * 어떻게 보여질 지 : width, height, padding, border, margin
+	 *************/
+
+	 width: 200px;
+	 /*
+	  * width는 박스 내 콘텐츠의 가로사이즈
+		* width는 최솟값(min-width)과 최댓값(max-width)를 지정할 수 있다.
+		* 즉 텍스트, 이미지 등 실제 콘텐츠가 들어가 있을 영역
+		* width를 200px로 줬다면, 콘텐츠가 들어갈 수 있는 가로 최대 크기는 200px
+		*/
+
+		height: 400px;
+		/*
+		 * height는 박스 내 콘텐츠의 세로사이즈
+		 * height는 최솟값(min-height)과 최댓값(max-height)를 지정할 수 있다.
+		 * 즉 텍스트, 이미지가 길어졌을 때 콘텐츠가 가지고 있을 영역
+		 * height를 400px로 주더라도, 콘텐츠가 길어지면 콘텐츠가 넘친다 (overflow)
+		 */
+
+		 padding: 50px;
+		 /*
+		  * padding은 콘텐츠와 박스 사이의 간격
+			* width가 200px인 박스에 padding을 50px로 넣었다면 이 box의 가로 사이즈는 300px
+			* height가 400px인 박스에 padding을 50px로 넣었다면 이 box의 세로 사이즈는 500px
+			* padding: <padding-top> <padding-right> <padding-bottom> <padding-left>
+			* SET A
+			* padding: 50px = padding: 50px 50px 50px 50px = padding: 50px 50px 50px = padding: 50px 50px
+				* padding-left: 50px;
+				* padding-right: 50px;
+				* padding-top: 50px;
+				* padding-bottom: 50px;
+			* SET B
+			* padding: 50px 30px = padding: 50px 30px 50px 30px
+				* padding-left: 30px;
+				* padding-right: 30px;
+				* padding-top: 50px;
+				* padding-bottom: 50px;
+			* SET C
+			* padding: 50px 30px 20px;
+				* padding-left: 30px;
+				* padding-right: 30px;
+				* padding-top: 50px;
+				* padding-bottom: 20px;
+			*/
+			margin: 50px;
+			/*
+			 * margin은 박스와 박스 사이의 간격
+			 * margin 영역은 늘 투명
+			 * margin: <margin-top> <margin-right> <margin-bottom> <margin-left>
+			 */
+			border:1px solid #555;
+			/*
+			 * border는 외곽선
+			 * border는 액자형태
+			 * border-width는 외곽선의 굵기를 나타냅니다. (1px)
+			 * border-style은 외곽선의 형태를 나타냅니다. (solid)
+			 * border-color는 외곽선의 색상을 나타냅니다. (#fff)
+			 * border: <border-width> <border-style> <border-color>;
+			 * border-width: <border-top-width> <border-right-width> <border-bottom-width> <border-left-width>
+			 * border-style: <border-top-style> <border-right-style> <border-bottom-style> <border-left-style>
+			 * border-color: <border-top-color> <border-right-color> <border-bottom-color> <border-left-color>
+			 */
+
+			 /*
+			  * box의 사이즈 계산법
+				* width + padding(좌, 우) + border(좌, 우)
+				* width(200px), padding(50px, 50px) + border(2px, 2px) = 304px;
+				* width(50%), padding(50px, 50px), border(2px, 2px) = ?;
+				* box의 사이즈 계산법을 바꿔주는 CSS - box-sizing
+				*/
+
+				box-sizing: content-box;
+				/*
+				 * box-sizing 속성은 box의 사이즈 계산법을 바꿔주는 CSS 속성이다
+				 * content-box : 기존과 동일
+				 * padding-box : width에서 padding은 빼되, border는 더한다.
+				   (width = 200, padding = 50, border = 4) = 208
+			   * border-box : width에서 padding,border를 뺀다
+				   (width = 200, padding = 50, border = 4) = 200
+				 */
+				 overflow: hidden;
+				 /*
+				  * overflow는 콘텐츠가 내가 정한 box의 크기를 넘쳤을 때 처리하는 법
+					* auto: 넘치지 않았다면 스크롤이 없고, 넘쳤다면 스크롤이 있다.
+					* scroll: 스크롤을 발생시킨다 (무조건)
+					* scroll-x: 가로스크롤을 발생시킨다.
+					* scroll-y: 세로스크롤을 발생시킨다.
+					* hidden: 가린다.
+					* visible: 보인다. (기본값)
+					*/
+}
+/*************
+ * Float layout
+ * float 속성을 이용해 구현하는 레이아웃
+ * 장점 : 구버전 브라우저에서도 잘 대응이 됨
+ * 단점 : 1px이라도 어긋나는 순간 레이아웃이 다 깨짐
+ * 부모 요소의 width가 자식요소의 width를 합한 것과 동일하거나 더 커야한다.
+ * left 혹은 right로만 레이아웃 구성이 가능하다.
+ **************/
+.float-layout {
+	width:970px;
+	margin:auto;
+	/*
+	 * float된 요소의 부모가 float된 요소의 높이를 알기 위해 사용하는 방법 : clearfix
+	 * 1. overflow를 이용하는 방법
+	 *    - overflow는 본디 넘쳐나는 콘텐츠를 어떻게 처리하기 위해서 만들어진 CSS 속성
+	 *    - overflow된 부모 입장에서, float된 자식요소는 넘쳐난 요소
+	 *    - overflow된 부모가 float된 요소의 높이를 재계산하여 내 height에 부여
+	 *    - overflow:hidden으로 넣는 방법의 단점은 부모 레이아웃의 밖에서 보여줘야하는 콘텐츠가 있는 경우 나오지 않음
+	 * 2. ::after를 이용하는 방법
+	 *    - 위에서 사용한 단점은 다 해결되나, IE8부터 지원함
+	 *    - :after {} - IE 8까지 대응하려면..
+	 */
+}
+.float-layout:after {
+	content:'';
+	display:block;
+	clear:both;
+}
+.float-layout .side-menu {
+	float:left;
+	/*
+	 * float는 원래 이미지를 좌측 상단, 우측 상단에 띄우기 위해 사용하던 CSS 속성
+	 * 레이아웃을 구현하기 위해 많이 사용
+	 * float는 띄운다는 뜻, 즉 브라우저에서 띄움
+	 * 부모요소가 float된 자식요소의 높이를 모르게 함.
+	 * float를 사용할 경우 부모 요소가 자식 요소의 높이를 모르는 이슈가 있다
+	 */
+	width:369px;
+	border-right:1px solid #000;
+}
+.float-layout .contents {
+	float:left;
+	width:600px;
+	height:1800px;
+	margin-left:-1px;
+	border-left:1px solid #000;
+}
+
+/************
+ * Position
+ * 좌표시스템을 사용한다
+ * 좌표시스템으로부터 좌측(left), 상단(top), 우측(right), 하단(bottom), z축(z-index)를 기점으로 고정시킨다.
+ * 1. position 속성을 사용한다.
+ * 2. left, top, right, bottom, z-index를 사용 가능하다.
+ ************/
+.pos {
+	/*
+	 * position 속성은 좌표시스템을 이용할 때, 어떤 형태로 좌표를 구성할 것인가를 나타낸다.
+	 * fixed : 브라우저에 고정
+	   * 해당 요소가 어떤 요소의 자식이던 간에 브라우저에 고정된다.
+		 * 부모 요소에 transform 속성이 들어가있는 경우에는 fixed가 정상적으로 동작하지않음 (이유는 나중)
+	 * absolute : 부모 좌표 시스템에 고정
+	   * 부모 요소의 position이 static이 아닌 경우에는 부모 요소를 기점으로 삼는다.
+		 * 부모 요소의 position이 static인 경우, 부모의 부모를 계속 찾아가서 position이 static이 아닌 경우를 찾는다.
+		 * 만약 없다면, body요소를 기준으로 한다.
+	 * relative : 자기 자신을 기준으로 고정
+	   * 자기 자신을 기점으로 움직인다.
+	 * static : 아무것도 안함 (정적, 기본값)
+	 */
+}
+.pos-fixed {
+	position: fixed;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	background: url(https://scontent.xx.fbcdn.net/v/t1.0-9/14222345_1109405545809089_6754277716874258181_n.jpg?oh=3f6cb170be61002c7783065c25de744b&oe=58504790);
+}
+.pos-absolute {
+	position: absolute;
+	background: black;
+}
+.pos-relative {
+	position: relative;
+	height:500px;
+	background: hotpink;
+	z-index:100;
+}
+.pos-relative + .pos-relative {
+	margin-top:150px;
+}
+.pos-static {
+	position: static;
+	background: blue;
+}
+
+
+
+
+
+
+/**/

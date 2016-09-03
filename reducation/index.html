@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- 여러분들이 바라보는 모든 웹페이지는 HTML -->
+<!--
+  - 웹(World wide web)
+	- 서로 링크를 이용해서 탐색하고 접속할 수 있는
+	- 내가 IP주소만 알고있으면 어떤 데이터에든 접속 가능한
+  -->
+<!--
+  - DOCTYPE html
+	- HTML의 문서 모델(DTD, Document Type Declaration)
+	- 문서 타입 선언
+	- HTML의 버전
+	- HTML은 25년간 발전을 하면서, 약 5번의 메이저 버전업
+	- 1.0, 2.0, 3.2, 4.1, 5.1
+ -->
+
+<!--
+  - 모든 기술에는 표준
+	- 브라우저 제조사, 개발자 등이 "이렇게 짜면 적어도 표준을 지킨 브라우저에서는 잘 보이게 될거야"
+  - IE가 예전에 기술을 독점하려고 난리쳐놓은 똥들이 남아있음.
+  - IE6에는 hasLayout (이상한 레이아웃)
+  - IE7부터 약간 표준을 지원하기 시작
+  - IE8부터는 어느정도 지원 (windows XP의 최종 브라우저 버전)
+  - IE9은 이도저도 아닌
+  - IE10부터 완전지원
+  - IE11부터는 모던브라우저 (Windows 7의 최종 브라우저 버전)
+  - MS Edge (Windows 10의 초기 브라우저, 계속 발전 중)
+  -->
+
+<!--
+  - DOCTYPE을 써주지 않으면 명시적 레거시 코드
+  - 쿽스 모드 (특수한 렌더링 모드)
+  - 님들 웹사이트는 1995년 쯤 만들어 진 거 같으니, 그 때 렌더링으로 한번 해볼게요
+  -->
+
+<html lang="ko">
+<!-- 모든 html의 루트 요소 -->
+<!-- lang 속성은 이 페이지의 언어를 정의, 스크린 리더나 구글의 로케일 등 다양한 분야에서 lang 속성을 참고하여 검색결과나 스크린리더 억양에 차이를 줌 -->
+  <head>
+    <!-- 컴퓨터에게 제공하는 콘텐츠 -->
+    <meta charset="UTF-8">
+    <title>Hello world</title>
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+
+    <!-- CSS -->
+    <!-- Normalize.css -->
+    <!-- 브라우저들간의 서로 다른 렌더링(화면, View)을 일치시켜주는 역할을 함 -->
+
+    <!-- CSS -->
+
+    <!-- User Agent CSS -->
+    <!-- 브라우저에서 기본적으로 제공하는 CSS, h1에 들어가있는 margin, ul에 들어가있는 margin, padding -->
+    <!-- User Agent CSS를 초기화시키고 싶다면 reset.css를 찾아서 사용하면 된다 -->
+    <link rel="stylesheet" href="normalize.css">
+
+    <!-- Custom CSS -->
+    <!-- 여러분들이 실제로 작성하는 CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- 실제로 작성하는 부분 -->
+    <!-- Heading Contents -->
+    <h1>배달의민족</h1>
+    <!-- h1은 보통 사이트 제목 -->
+    <!-- 한 페이지에 하나만 있는 게 좋음 -->
+    <section>
+      <h2>BBQ 치킨</h2>
+    </section>
+    <section>
+      <h2>황궁쟁반짜장</h2>
+      <!-- h2는 보통 페이지 제목 -->
+      <section>
+        <h3>상세</h3>
+        <strong>영업시간</strong>
+        <p>오전 8:30부터 오후 4:30까지</p>
+        <strong>배달지</strong>
+        <p>대치동</p>
+        <strong>배달비</strong>
+        <p>0원</p>
+      </section>
+
+      <section>
+        <h3>메뉴</h3>
+        <!-- h3는 각 섹션 제목 -->
+        <section>
+          <h4>세트메뉴</h4>
+          <ul>
+            <li>빅맥</li>
+            <li>쿼터파운드치즈버거</li>
+            <li>쿼터파운드치즈버거</li>
+            <li>쿼터파운드치즈버거</li>
+            <li>쿼터파운드치즈버거</li>
+            <li>쿼터파운드치즈버거</li>
+          </ul>
+        </section>
+        <section>
+          <h4>식사부</h4>
+        </section>
+        <section>
+          <h4>요리부</h4>
+        </section>
+      </section>
+    </section>
+
+    <!-- Sectioning Content, Grouping Content -->
+    <!-- 섹션들간의 연관성 -->
+    <!-- 헤딩이 반드시 필요하다 -->
+    <section></section>
+
+    <!-- 연관성 X, 전체적인 콘텐츠와 상관없이 독립적으로 움직이는 섹션 -->
+    <!-- 헤딩이 반드시 필요하다 -->
+    <article></article>
+
+    <!-- 연관성이 있기는 한데... 읽어도 그만 안읽어도 그만 -->
+    <aside></aside>
+
+    <!-- 네비게이션 -->
+    <nav></nav>
+
+    <!-- 헤더 -->
+    <header></header>
+
+    <!-- 푸터 -->
+    <footer></footer>
+
+    <!-- 실제 주소 -->
+    <address></address>
+
+    <!-- Group -->
+    <div></div>
+
+    <main class="float-layout">
+      <section class="side-menu">SIDE MENU</section>
+      <section class="contents">CONTENTS</section>
+    </main>
+
+    <div class="pos pos-fixed"></div>
+    <div class="pos pos-relative">
+      <div class="pos pos-absolute"></div>
+    </div>
+    <div class="pos pos-relative">
+      <div class="pos pos-absolute"></div>
+    </div>
+    <div class="pos pos-static"></div>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- -->
