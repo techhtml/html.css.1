@@ -40,7 +40,62 @@ main {}
 .banner .navigation-items-on {
 	background: red;
 }
-.categories {}
-.deals {}
+.categories {
+	margin: 0.4em;
+	background: white;
+}
+.categories ul {
+	display:flex;
+	margin:0;
+	padding:0;
+}
+.categories li {
+	flex:1;
+	list-style:none;
+	font-size: 0.7em;
+	line-height: 1.2em;
+	text-align:center;
+}
+.categories a {
+	display:block;
+	padding:15px 0;
+}
+.categories img {
+	display:block;
+	width:70px;
+	margin:auto;
+}
+.deals {
+	display:flex;
+	margin: 0.4em;
+}
+.deals .deal {
+	flex:1;
+	background:white;
+}
+.deals .deal + .deal {
+	margin-left: 0.5em;
+}
+.deals .deal a {
+	display:block;
+	padding:0.5em;
+	text-align:center;
+}
+.deals .deal strong {
+	font-size: 1.3em;
+}
+.deals .deal p {
+	margin:0.5em 0 0;
+	padding: 0.2em 0.5em 0.3em;
+	color: white;
+	background: crimson;
+	border-radius: 2em;
+}
+.deals .deal-super p {
+	background:orange;
+}
+.deals .deal img {
+	width:100%;
+}
 .ad {}
 .recommend {}
