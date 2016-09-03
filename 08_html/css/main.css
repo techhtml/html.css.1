@@ -1,0 +1,46 @@
+main {}
+.banner {
+	position: relative;
+	overflow: hidden;
+}
+.banner ul {
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+.banner li {
+	min-width:100%;
+	min-height:100%;
+	list-style:none;
+}
+.banner a {
+	display: block;
+}
+.banner img {
+	width:100%;
+	vertical-align:top;
+}
+.banner .navigation {
+	display: flex;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+}
+.banner .navigation-items {
+	display:block;
+	width:8px;
+	height:8px;
+	margin:0 5px;
+	background:white;
+	border-radius:50%;
+	z-index:50;
+}
+.banner .navigation-items-on {
+	background: red;
+}
+.categories {}
+.deals {}
+.ad {}
+.recommend {}

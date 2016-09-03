@@ -54,6 +54,7 @@ button, a {
 	width: 84.5%;
 	background: white;
 	transition: 0.5s transform ease;
+	z-index:1000;
 }
 .side-menu.side-menu-off {
 	transform: translateX(-100%);
