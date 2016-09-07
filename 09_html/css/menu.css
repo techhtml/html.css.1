@@ -1,0 +1,92 @@
+html {
+	font-size: 18px;
+	background: #efefef;
+}
+.lnb {
+	background:#00c73c;
+	color: #fff;
+}
+.lnb a {
+	color: inherit;
+}
+.lnb .logo-area {
+	display: flex;
+}
+.lnb .logo-area a[class|="btn"] {
+	font-size: 1.5rem;
+	padding: 0.3rem 1rem 0.1rem;
+}
+.lnb .logo-area h1 {
+	flex: 1;
+	margin: 0.1rem 0 0;
+	text-align: center;
+}
+.lnb .logo-area h1 a {
+	display: block;
+	text-decoration: none;
+	font-weight: 900;
+}
+.lnb .search-area {
+	display:flex;
+	margin:0.3rem 1rem;
+	background:#fff;
+}
+.lnb .search-area input[type="text"] {
+	flex:1;
+	padding:0.5rem 1rem;
+	margin:0;
+	border:0;
+	font-size: inherit;
+	box-sizing: border-box;
+}
+.lnb .search-area button[type="submit"] {
+	background: none;
+	padding: 0.2rem 1rem;
+	border: 0;
+	margin: 0;
+	font-size: 24px;
+	color:#00c73c;
+}
+
+.lnb nav {
+	display:flex;
+	background:#fff;
+	color: black;
+	overflow:hidden;
+}
+.lnb .main-menu-list {
+	flex: 1;
+	max-width:90%;
+	padding: 0;
+	margin: 0;
+	white-space:nowrap;
+	font-size:0;
+}
+.lnb .main-menu-list li {
+	display:inline-block;
+	list-style:none;
+	margin:0 1em;
+	font-size:18px;
+}
+.lnb .main-menu-list li + li {
+	margin-left: 0;
+}
+.lnb .main-menu-list a {
+	display: block;
+	padding: 0.5em 0 0.3em;
+	border-bottom:3px solid #fff;
+	text-decoration:none;
+}
+.lnb .main-menu-list a.on {
+	color: #00c73c;
+	border-bottom-color:#00c73c;
+}
+.lnb .btn-layer-open {
+	width: 10%;
+	padding: 0.5em;
+	margin: 0;
+	background: #fff;
+	box-sizing:border-box;
+	border:0;
+	border-left: 1px solid #efefef;
+}
