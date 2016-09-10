@@ -1,0 +1,40 @@
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.sp {
+	display: block;
+	background-image: url("../img/sp_mn160817.png");
+}
+.sp.sp-mail {
+	background-position:0 -51px;
+}
+.sp.sp-cafe {
+	background-position:-35px -51px;
+}
+.sp.sp-blog {
+	width: 36px;
+	background-position:-69px -51px;
+}
+.ir {
+	text-indent: -10000%;
+	overflow: hidden;
+}
+body {
+	font-size: 13px;
+	line-height: 16px;
+	font-family: "APPLE SD Gothic NEO", "Gulim", "굴림", sans-serif;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+ul, li {
+	padding:0;
+	margin:0;
+	list-style:none;
+}

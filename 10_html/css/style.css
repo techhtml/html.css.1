@@ -1,27 +1,3 @@
-.clearfix:after {
-	content: "";
-	display: block;
-	clear: both;
-}
-
-body {
-	font-size: 13px;
-	line-height: 16px;
-	font-family: "APPLE SD Gothic NEO", "Gulim", "굴림", sans-serif;
-}
-a {
-	color: inherit;
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: underline;
-}
-ul, li {
-	padding:0;
-	margin:0;
-	list-style:none;
-}
-
 .gnb {
 	width: 100%;
 	border-bottom: 1px solid #ccc;
@@ -68,14 +44,38 @@ ul, li {
 }
 .search-wrap h1 {
 	float: left;
-  width: 210px;
+}
+.search-wrap h1 a {
+	display: block;
+	width: 210px;
 	height: 78px;
+	background: url("../img/nmms_224940510.gif") 0 0 no-repeat;
+	text-indent: -10000%;
+	/* IR 기법 */
 }
 .search-wrap .search-area {
 	float: left;
 	width: 430px;
 }
-.nav {}
+.nav {
+
+}
+.navbar {
+	width: 100%;
+	height: 38px;
+	background-position:0 -420px;
+}
+.navbar li {
+	float: left;
+	margin: 12px 12px;
+}
+.navbar li + li {
+	margin-left:0;
+}
+.navbar a {
+	width: 24px;
+	height: 14px;
+}
 
 .container {}
 .footer {}
