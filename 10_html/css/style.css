@@ -3,10 +3,57 @@
 	display: block;
 	clear: both;
 }
+
+body {
+	font-size: 13px;
+	line-height: 16px;
+	font-family: "APPLE SD Gothic NEO", "Gulim", "굴림", sans-serif;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+ul, li {
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+
 .gnb {
 	width: 100%;
 	border-bottom: 1px solid #ccc;
 	background: #efefef;
+}
+.gnb-tools {
+	float: left;
+	width: 33.333333%;
+}
+.gnb-tools .lnk-app {
+	float:left;
+}
+.gnb-tools .font-select {
+	float:left;
+}
+.gnb-navigation {
+	float: left;
+	width: 33.333333%;
+	text-align:center;
+}
+.gnb-navigation li {
+	display: inline-block;
+}
+.gnb-out-link {
+	float: right;
+	width: 33.333333%;
+}
+.gnb-out-link ul {
+	float: right;
+}
+.gnb-out-link li {
+	float: left;
 }
 .wrap {
 	width: 940px;
