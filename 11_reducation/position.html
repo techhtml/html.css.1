@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Hello World</title>
+	<meta name="viewport" content="initial-scale=1, width=device-width">
+	<style>
+		header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 200px;
+			background: red;
+		}
+		.wrap {
+			position: relative;
+			width: 100%;
+			height: 400px;
+			margin-top:200px;
+		}
+		.left-side-menu {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 20%;
+			height: 100%;
+			background: red;
+		}
+		.center {
+			position: absolute;
+			top: 0;
+			left: 20%;
+			width: 60%;
+			height: 100%;
+			background: blue;
+		}
+		.right-side-menu {
+			position: absolute;
+			top: 0;
+			left: 80%;
+			width: 20%;
+			height: 100%;
+			background: orange;
+		}
+		footer {
+			width: 100%;
+			height: 200px;
+			background: black;
+		}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="wrap">
+		<aside class="left-side-menu"></aside>
+		<main class="center"></main>
+		<aside class="right-side-menu"></aside>
+	</div>
+	<footer></footer>
+</body>
+</html>
