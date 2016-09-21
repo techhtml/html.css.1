@@ -1,0 +1,72 @@
+/**
+ * CSS3 Flex
+ * CSS2까지의 레이아웃 (전통적인 방법의 레이아웃 구현법)
+   * 1. 문서 레이아웃을 위한, block 요소
+	 * 2. 텍스트 레이아웃을 위한, inline 요소
+	 * 3. 2D 데이터를 표현하기 위한, table 요소
+	 * 4. 위치를 지정해서 레이아웃을 정하는, position
+	 * 5. float 속성을 이용한 레이아웃
+ * 지금까지의 문제점은, 원래 속성들이 웹 상의 Layout을 위해서 만들어진 것이 아니었다.
+ * flex는 웹페이지 상의 레이아웃을 표현하기 위해서 작성된 CSS3 디스플레이 모델
+   * flex의 특징
+	 * - 단순함
+	 * - 레이아웃이 깨지지 않는 것을 목표
+	 * - 레이아웃을 위해서 만들어진 디스플레이 모델
+ * flex의 구성
+   * container > item
+	 * item이 흐르는 방향 - main axis
+	 * item이 흐르는 방향과 상반되는 방향 - cross axis
+ * flex의 시작
+   * container 요소에 display : flex 를 넣음으로써 시작
+ * flex는 CSS3, 2007년부터 시작했는데 14번정도 스펙이 변경
+ 	 * 옛브라우저에서 flex를 제대로 지원하지 않거나, 다른 이름으로 지원
+ */
+
+ .flex-container {
+	 display: -ms-flexbox; /* microsoft 브라우저 대응 */
+	 display: -webkit-box; /* 안드로이드 2.x - 4.3 */
+	 display: -webkit-flex; /* iOS 6 - 8 */
+	 display: flex; /* 모던 브라우저 */
+ }
+ .flex-container .items {
+	 /*
+	  * flex-grow 속성
+		* 속성값 : <number>
+		* 해당 요소들의 나누는 비율
+		* 숫자에 의해서 비율을 결정
+		* 모두 같은 숫자라면 같은 비율 (예를 들어, 박스가 5개라면, 20%씩 나눠가짐)
+		* 다른 박스와 다른 숫자라면, 다른 박스에 대비해 그만큼 증가.
+		  (박스가 5개일 때, flex가 1이고, 한 박스만 2라면, 40%가 아님 / 계산하기 어려워 그런거 아님)
+    * 박스에 flex 속성이 지정되지 않았고, 하나의 박스에만 flex 속성이 지정된 경우,
+		  해당 박스를 제외한 나머지는 자기의 텍스트 영역만큼만 width를 가진다.
+		* 지원하지 않는 브라우저가 있을 수 있기 때문에, flex 속성이라 사용함
+		*/
+	 -webkit-box-flex: 1;
+	 -webkit-flex: 1;
+	 -ms-flex: 1;
+	 flex: 1;
+ }
+.flex-container .items:first-child {
+	-webkit-box-flex: 2;
+	-webkit-flex: 2;
+	-ms-flex: 2;
+	flex: 2;
+}
+.item-first {
+	/*
+	 * order 속성
+	 * flex display에서 레이아웃의 순서를 변경하기 위해 사용하는 CSS 속성
+	 * 속성값: 양수 <number>
+	 * 만약 속성값이 -1인 경우에만 항상 맨 앞에
+	 */
+	-webkit-box-ordinal-group: -1;
+	-ms-flex-order: -1;
+	-webkit-order: -1;
+	order: -1;
+}
+
+
+
+
+
+ /**/
