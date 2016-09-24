@@ -1,0 +1,81 @@
+/*
+ * CSS 미디어쿼리
+ * 미디어 - 내 웹사이트가 보여지는 환경
+   * print
+	 * handheld
+	 * screen (실질적으로 가장 많이 쓰는 것)
+ * 미디어 쿼리 - 미디어에 따라서 내가 다른 CSS를 주고자 할 때
+	 * 쿼리 = 조건
+ */
+
+@media (/* 쿼리 */) {
+	/*
+	 * 쿼리에 맞는 CSS
+	 */
+}
+
+body {
+	background: crimson;
+	transition: 1s all ease;
+}
+/*
+ * min-width
+ * 브라우저 사이즈의 최솟값
+ * 만약 (최솟값)보다 브라우저가 크다면
+ */
+@media (min-width:1000px) {
+	body {
+		background: blue;
+	}
+}
+
+/*
+ * max-width
+ * 브라우저 사이즈의 최댓값
+ * 만약 (최댓값)보다 브라우저가 작다면
+ */
+@media (max-width:700px) {
+	body {
+		background: gold;
+	}
+}
+
+@media (min-width:1000px) and (max-width: 1600px) {
+	body {
+		background: orange;
+	}
+}
+
+/*
+ * min-device-width
+ * max-device-width
+ * 기기의 가로사이즈를 기준으로 미디어쿼리를 부여
+ */
+
+/*
+ * orientation
+ * 값 : portrait, landscape
+ * portrait : 스마트폰이 세로보기인 경우 (width가 height보다 작은 경우)
+ * landscape : 스마트폰이 가로보기인 경우 (width가 height보다 큰 경우)
+ */
+
+/*
+ * aspect-ratio (min / max)
+ * device-aspect-ratio (min / max)
+ * 해상도
+ * 값 : aspect-ratio: 16/9
+ * 값 : aspect-ratio: 1280/720
+ * 값 : min-aspect-ratio: 1280/720
+ */
+/*
+ * 미디어쿼리 스펙
+ * http://techhtml.github.io/css3-mediaqueries/
+ */
+
+/*
+ * min-width 기준
+ * 320px 이상 : 모바일 기기
+ * 768px 이상 : 태블릿
+ * 1020px 이상 : PC
+ * 1920px 이상 : 큰 화면의 PC
+ */
