@@ -1,0 +1,74 @@
+/*
+ * CSS3 Animations & Transition
+ */
+
+.box {
+	/*
+	 * transition : <transition-duration> <transition-property> <transition-timing-function>
+	 * transition-duration : 얼마나 많은 시간동안 애니메이션을 줄 것인가
+	 * 속성값 : <number>s
+	 * transition-property : 어떤 속성에 애니메이션을 부여할 것인가
+	 * 속성값 : <다른속성명>이나 all
+	 * transition-timing-function : 베지어곡선을 기반으로 애니메이션의 가속을 어떻게 할것인가.
+	 * 속성값 : linear (등속), ease (처음 가속, 마지막 가속), ease-out (마지막 가속)
+	 * 속성값 : cubic-bezier(<초기값 1>, <초기값 2>, <말기값 1>, <말기값 2>)
+	 * 속성값 : cubic-bezier(0, 0, 1, 1); = 등속운동
+	 * 초기값 1을 늘리게 되는 경우 시작할 때의 속도가 느려짐
+	 * 초기값 2를 늘리게 되는 경우 시작할 때의 속도가 빨라짐
+	 * 말기값 1을 줄이게 되는 경우 끝날 때의 속도가 느려짐
+	 * 말기값 2를 줄이게 되는 경우 끝날 때의 속도가 빨라짐
+	 * 베지어 곡선 그리기 : http://cubic-bezier.com/
+	 */
+	transition-property: width, height;
+	transition-duration: 3s, 2s;
+	transition-timing-function: cubic-bezier(0, 0, 1, 0.2);
+}
+
+/**
+ * CSS3 Animations
+ * A 지점부터 B 지점까지의 애니메이션
+ * transition은 A가 B로 변할 때 (상태의 변화) 애니메이션을 부여
+ * animation은 A와 B를 애니메이션 자체에서 지정하여 부여
+ * @keyframes {}
+ * * animation이 어떻게 동작할 것인가.
+ * * 어떤 속성을 어떤 타이밍에 어떻게 바꿀 것인가
+ * animation
+ * * animation이 몇초동안 동작할 것인가
+ * * animation을 반복할 것인가
+ * * 어떤 요소에 애니메이션을 줄것인가
+ */
+.load-bar {
+	width: 100%;
+	height: 5px;
+	background: rgba(0,0,0,0.5);
+}
+.load-bar-cont {
+	width: 100%;
+	height: 5px;
+	background: green;
+	/*
+	 * animation: <animation-name> <animation-duration> <animation-iteration-count>
+	 * animation-name : 키프레임의 이름
+	   속성값 : @keyframes 이름
+	 * animation-duration : 애니메이션될 시간
+	   속성값 : <number>s
+	 * animation-iteration-count : 애니메이션이 반복되는 횟수
+	   속성값 : <number>, infinite
+	 * animation-direction : 애니메이션이 끝나고 난 후 반복할 때 되돌아갈 것인가
+	   속성값 : alternate : 애니메이션이 끝나고 되돌아가기
+	 * animation-fill-mode
+	   속성값 : forwards : 애니메이션이 끝났을 때 상태로 정지
+	 */
+ animation-name: loading;
+ animation-duration: 2.2s;
+ animation-fill-mode: forwards;
+}
+
+@keyframes loading {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}

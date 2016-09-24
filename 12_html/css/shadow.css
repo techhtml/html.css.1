@@ -1,0 +1,25 @@
+/*
+ * CSS Shadow
+ */
+
+.box {
+	width: 300px;
+	height: 300px;
+	background: gold;
+}
+.shadow {
+	/*
+	 * box-shadow
+	 * 박스 자체에 그림자를 넣어주는 CSS3
+	 * box-shadow: [가로 offset] [세로 offset] [흐린 정도] [흐트리기 정도, 옵션] [색상]
+	 * box-shadow 속성값 : px
+	 */
+	box-shadow: 0 0 2px 1px rgba(0,0,0,0.15);
+	/*
+	 * text-shadow
+	 * 텍스트에 그림자를 넣어주는 CSS3
+	 * text-shadow: [가로 offset] [세로 offset] [흐린 정도] [색상]
+	 */
+	 color:black;
+	 text-shadow: 1px 1px 0 rgba(255,255,255,0.95);
+}
