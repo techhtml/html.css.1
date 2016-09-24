@@ -1,0 +1,82 @@
+/*
+ * CSS3 Transform
+ * transform은 변형
+ * box를 변형한다
+ */
+
+.box {
+	width: 100px;
+	height: 100px;
+	/*
+	 * width
+	 * height
+	 * padding
+	 * border
+	 * margin
+	 * 박스의 사이즈에 직접적으로 영향을 주는 속성
+	 */
+
+  /*
+	 * position
+	 * left
+	 * top
+	 * right
+	 * bottom
+	 * z-index
+	 * 박스의 위치에 직접적으로 영향을 주는 속성
+	 */
+
+/*
+* CSS3 Transform
+  * 위치를 옮기기는 하나, 그렇게 보이는 것 뿐이지, 실제로 위치가 이동하지는 않음
+	* margin (재연산)
+	* position (재연산)
+	* transform: translate() / 연산X
+* 변형
+  * 옮기기 (translate)
+	* 회전 (rotate)
+*/
+
+/*
+ * transform : translate(x축, y축)
+ * x축, y축 속성값 : <length>
+ * px, em, rem, %
+ * transform: translate(100px, 100px);
+ */
+	background: crimson;
+
+	/*
+	 * transform: rotate(각도)
+	 * transform: rotateX(), rotateY(), rotateZ()
+	 * 속성값 : <정수>deg
+	 * transform: rotate(120deg);
+	 */
+
+
+	 /*
+	  * transform: scale(<number>)
+		* 크기를 조정
+		* transform: scale(1);
+		*/
+
+		/*
+		 * multiple transform
+		 * transform: <속성값> <속성값> <속성값>
+		 */
+
+		 transform: translate(0, 0) rotate(360deg) scale(1.5);
+}
+
+
+.mask {
+	width: 250px;
+	height: 150px;
+	overflow: hidden;
+}
+.mask img {
+	transform: translate(-25%, -25%) scale(1);
+	transition: 0.3s all ease;
+}
+.mask:hover img {
+	transform: translate(-25%, -25%) scale(0.5);
+}
