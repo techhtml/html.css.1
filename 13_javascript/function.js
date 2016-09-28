@@ -28,12 +28,7 @@ var callYourName = function(name, age) {
  */
 
 // callMyName();
-callYourName("조은", "123456");
-
-
-
-
-
+// callYourName("조은", "123456");
 
 /**/
 
@@ -43,11 +38,24 @@ callYourName("조은", "123456");
  * 숫자를 1식 늘립니다 (2)
  * 버튼 3개에 같은 동작을 부여해주세요 (3)
  * var btn1, btn2, btn3;
- * btn1.event, btn2.event, btn3.event
  * 힌트 : 이벤트를 부여하는 함수를 생성하면?
  */
 
+var btn_1 = document.querySelector(".btn-1");
+var btn_2 = document.querySelector(".btn-2");
+var btn_3 = document.querySelector(".btn-3");
 
+var addBtnEvent = function(target) {
+	var num = 0;
+	target.addEventListener("click", function() {
+		num = num + 1;
+		console.log(num);
+	})
+}
+
+addBtnEvent(btn_1);
+addBtnEvent(btn_2);
+addBtnEvent(btn_3);
 
 
 
