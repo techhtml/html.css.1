@@ -32,10 +32,6 @@ btn.addEventListener("click", function() {
 	 console.log(num);
 });
 
-/*
- * span 요소를 클릭했을 때, 숫자가 3씩 증가하도록
- */
-
 
 
 
