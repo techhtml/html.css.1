@@ -45,18 +45,44 @@ var btn_1 = document.querySelector(".btn-1");
 var btn_2 = document.querySelector(".btn-2");
 var btn_3 = document.querySelector(".btn-3");
 
+/*
+if(btn_1.className === "btn-1") {
+	btn_1.className = "btn-1 on"
+} else {
+	btn_1.className = "btn-1";
+}
+*/
+
 var addBtnEvent = function(target) {
-	var num = 0;
+	var targetClassName = target.className;
 	target.addEventListener("click", function() {
-		num = num + 1;
-		console.log(num);
-	})
+		if(target.className === targetClassName) {
+			target.className = targetClassName + " on";
+		} else {
+			target.className = targetClassName;
+		}
+	});
 }
 
 addBtnEvent(btn_1);
 addBtnEvent(btn_2);
 addBtnEvent(btn_3);
 
+/*
+ * IF문
+ * 만약에... XX가 참이라면...... 뭘 하고...
+ * 만약에... XX가 거짓이라면..... 뭘 해
+ */
+
+var choeun = "조은";
+
+if(choeun === "조은") {
+  // 만약 괄호 안의 조건이 참인 경우
+	// alert("얘는 조은입니다");
+} else {
+	// 만약 괄호 안의 조건이 거짓인 경우
+	// alert("얘는 조은이 아닙니다")
+}
 
 
 
