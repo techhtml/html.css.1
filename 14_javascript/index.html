@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>Hello World</title>
+		<meta name="viewport" content="initial-scale=1, width=device-width">
+		<style>
+			body, ul, li {
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			li {
+				float:left;
+				width:50%;
+				text-align:center;
+				cursor: pointer;
+			}
+			li img {
+				width:100%;
+				display:block;
+				vertical-align:top;
+			}
+			.layer {
+				position: fixed;
+				left:0;
+				top:0;
+				bottom:0;
+				width:50%;
+				padding:50px;
+				background:#fff;
+				transition: 1s all ease;
+				z-index:1000;
+				box-sizing: border-box;
+			}
+			.layer-off {
+				-webkit-transform:translate(-100%, 0);
+				-moz-transform:translate(-100%, 0);
+				transform:translate(-100%, 0);
+			}
+			.layer-on {
+				-webkit-transform:translate(0, 0);
+				-moz-transform:translate(0, 0);
+				transform:translate(0, 0);
+			}
+			.dimmed {
+				position: fixed;
+				left:0;
+				top:0;
+				right:0;
+				bottom:0;
+				background:black;
+				transition: 0.3s opacity ease;
+				z-index:500;
+			}
+			.dimmed-off {
+				-webkit-transform:translate(-100%, -100%);
+				-moz-transform:translate(-100%, -100%);
+				transform:translate(-100%, -100%);
+				opacity: 0;
+			}
+			.dimmed-on {
+				-webkit-transform:translate(0, 0);
+				-moz-transform:translate(0, 0);
+				transform:translate(0, 0);
+				opacity: 0.35;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>미스터피자</h1>
+		<ul class="pizza-list">
+			<li role="button">
+				<img src="http://image.auction.co.kr/itemimage/de/0f/a1/de0fa1dd5.jpg" alt="">
+				쉬림프골드
+			</li>
+			<li role="button">
+					<img src="http://image.auction.co.kr/itemimage/de/0f/a1/de0fa1dd5.jpg" alt="">
+					쉬림프골드
+			</li>
+			<li role="button">
+				<img src="http://image.auction.co.kr/itemimage/de/0f/a1/de0fa1dd5.jpg" alt="">
+				쉬림프골드
+			</li>
+			<li role="button">
+					<img src="http://image.auction.co.kr/itemimage/de/0f/a1/de0fa1dd5.jpg" alt="">
+					쉬림프골드
+			</li>
+			<li role="button">
+				<img src="http://image.auction.co.kr/itemimage/de/0f/a1/de0fa1dd5.jpg" alt="">
+				쉬림프골드
+			</li>
+			<li role="button">
+					<img src="http://image.auction.co.kr/itemimage/de/0f/a1/de0fa1dd5.jpg" alt="">
+					쉬림프골드
+			</li>
+		</ul>
+		<div class="layer layer-off">
+			<h1>쉬림프골드</h1>
+			<p>스파이시 통새우가 아낌없이 올라가 씹을수록 탱글탱글한 식감에 매콤한 살사소스의 화려한 조화가 환상적인 맛!</p>
+			<h2>다른메뉴보기</h2>
+			<ul>
+				<li role="button">
+					<img src="http://image.auction.co.kr/itemimage/de/0f/a1/de0fa1dd5.jpg" alt="">
+					쉬림프골드
+				</li>
+				<li role="button">
+						<img src="http://image.auction.co.kr/itemimage/de/0f/a1/de0fa1dd5.jpg" alt="">
+						쉬림프골드
+				</li>
+				<li role="button">
+					<img src="http://image.auction.co.kr/itemimage/de/0f/a1/de0fa1dd5.jpg" alt="">
+					쉬림프골드
+				</li>
+				<li role="button">
+					<a href="https://www.mrpizza.co.kr/menu/productView">
+						<img src="http://image.auction.co.kr/itemimage/de/0f/a1/de0fa1dd5.jpg" alt="">
+						쉬림프골드
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="dimmed dimmed-off"></div>
+		<script src="modal.js"></script>
+	</body>
+</html>
