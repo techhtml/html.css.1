@@ -4,71 +4,10 @@
 	<meta charset="utf-8">
 	<title>Hello world</title>
 	<meta name="viewport" content="initial-scale=1, width=device-width">
-	<style>
-		html, body {
-			margin:0;
-			height:100%;
-			background: #222;
-		}
-		body {
-			padding-bottom: 400px;
-		}
-		header {
-			position: fixed;
-			top: 50px;
-			left: 50%;
-			width: 80%;
-			transform: translate(-50%, 0);
-			z-index: 2000;
-			text-align:center;
-			color: #fff;
-		}
-		header ul {
-			display: flex;
-			padding:0;
-			margin:0;
-		}
-		header li {
-			flex: 1;
-			list-style:none;
-		}
-		header a {
-			color:#fff;
-		}
-		.panel {
-			position: absolute;
-			left: 0;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			background: url(https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/14600878_1137769919639318_9078279487900088632_n.jpg?oh=1e33984f4e168cfe7d3be03b99360cee&oe=58702BC7) center center no-repeat crimson;
-			transition: 1s all ease;
-		}
-		.panel-on {
-			transform: translate(0, 0);
-		}
-		.panel-off {
-			transform: translate(100%, 0);
-		}
-		main {
-			position: relative;
-			width: 100%;
-			height: 100%;
-			z-index: 1000;
-			overflow: hidden;
-		}
-		footer {
-			position: fixed;
-			bottom:0;
-			color: #fff;
-			width: 100%;
-			height: 400px;
-			padding: 30px;
-			box-sizing: border-box;
-		}
-	</style>
+	<link rel="stylesheet" href="common.css">
+	<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="insert-page">
 	<header>
 		<h1>ChoEun</h1>
 		<nav>
@@ -80,7 +19,7 @@
 			</ul>
 		</nav>
 	</header>
-	<main>
+	<main class="main-content">
 		<div class="panel panel-on"></div>
 		<div class="panel panel-off"></div>
 		<div class="panel panel-off"></div>

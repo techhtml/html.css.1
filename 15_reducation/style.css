@@ -1,0 +1,138 @@
+.main-content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	overflow: hidden;
+}
+.panel {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: url(https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/14600878_1137769919639318_9078279487900088632_n.jpg?oh=1e33984f4e168cfe7d3be03b99360cee&oe=58702BC7) center center no-repeat crimson;
+	transition: 1s all ease;
+}
+.panel-on {
+	transform: translate(0, 0);
+}
+.panel-off {
+	transform: translate(100%, 0);
+}
+
+/*
+ * detail
+ */
+
+.product-detail {
+	position: relative;
+	z-index: 10;
+	background: #fff;
+}
+.product-detail .banner {
+	padding: 280px 0 80px 0;
+	background: cornflowerblue;
+}
+.product-detail .banner .thumb {
+	width: 840px;
+	margin: auto;
+	position: relative;
+}
+.product-detail .banner .thumb-image {
+	float: left;
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+}
+.product-detail .banner .thumb-image img {
+	width: 100%;
+	transform: translate(0, -25%);
+}
+.product-detail .banner .thumb-detail {
+	position: absolute;
+	left: 400px;
+	top: 50%;
+	transform: translate(0, -50%);
+	color: white;
+}
+.product-detail .banner .thumb-detail h1,
+.product-detail .banner .thumb-detail p {
+	margin: 0;
+}
+.product-detail .banner .thumb-detail p {
+	border-bottom: 1px solid rgba(255,255,255,0.4);
+	padding-bottom: 30px;
+	margin-bottom: 15px;
+}
+.product-detail .banner .thumb-detail a {
+	color: white;
+	text-decoration: none;
+}
+.product-detail .banner .img-list {
+	display: flex;
+	padding: 20px 0 0;
+	width: 1040px;
+	margin: 20px auto 0;
+	border-top: 1px solid rgba(255,255,255,0.4);
+}
+.product-detail .banner .img-list li {
+	width: 100px;
+	height: 75px;
+	margin-right: 20px;
+	overflow: hidden;
+}
+.product-detail .banner .img-list img {
+	width: 100%;
+	transform: translate(0, -25%);
+}
+.product-detail .summary {
+	text-align: center;
+	width: 640px;
+	padding: 50px 0;
+	margin: auto;
+}
+.product-detail .summary h2 {
+	margin: 0;
+}
+.product-detail .feature {
+	background: #2ac1bc;
+}
+.product-detail .feature ul {
+	padding:0;
+	margin:0
+}
+.product-detail .feature li {
+	position: relative;
+	padding: 35% 0 0;
+	margin:0;
+}
+.product-detail .feature .feature-content {
+	position: absolute;
+	left: 5%;
+	top: 50%;
+	width: 30%;
+	transform: translate(0, -50%);
+	z-index: 60;
+}
+.product-detail .feature h3 {
+	margin:0;
+	font-size: 1.8em;
+}
+.product-detail .feature p {
+	margin:0.3em 0;
+}
+.product-detail .detail {}
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
