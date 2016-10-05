@@ -48,7 +48,7 @@ var offLayer = function() {
 	layerOff();
 }
 
-// 이벤트 넣는 부분
+// 이벤트 넣는 것
 for(var i = 0; i < lists.length; i += 1) {
 	var list = lists[i];
 	list.addEventListener("click", onLayer)
